@@ -1,5 +1,10 @@
 ### a) ¿Qué es y cómo funciona el elemento <RouterOutlet>?
 
+<RouterOutlet> es un elemento en Angular que actúa como un contenedor para mostrar vistas de rutas activas. Cuando se navega a través de la aplicación, Angular utiliza el enrutador para determinar qué vista mostrar en el <RouterOutlet> en función de la ruta activa. El enrutador se encarga de asociar las rutas con las vistas correspondientes y de actualizar el <RouterOutlet> para mostrar la vista correcta.
+
+La configuración de rutas se define en un archivo de enrutamiento, donde se especifican las rutas y las vistas correspondientes. Por ejemplo, se puede definir una ruta '/contact' que muestre una vista llamada "ContactComponent".
+
+Cuando el usuario navega a la ruta '/contact', el enrutador busca en la configuración de rutas y encuentra que la vista correspondiente es "ContactComponent", y la renderiza dentro del <RouterOutlet>.
 
 
 ### b) ¿Para qué se utilizan las directivas routerLink y routerLinkActive? ¿Existen más directivas relacionadas con el router?
