@@ -23,8 +23,38 @@ A continuación podemos ver otras directivas relacionadas con el router:
 
 ### c) ¿Qué diferencias hay entre los servicios Router y ActivatedRoute? ¿Qué funcionalidades tiene cada uno de estos servicios? Describe algunos de los métodos más importantes por los que están compuestos.
 
+**Router** es un servicio de Angular que se encarga de la navegación entre rutas en una aplicación. Proporciona métodos para navegar a una ruta específica, volver a la ruta anterior, navegar a una ruta relacionada y navegar a una ruta con parámetros.
+
+Por otro lado, **ActivatedRoute** es un servicio de Angular que proporciona información sobre una ruta específica que está siendo activada, incluyendo parámetros de ruta, datos y un observador para cambios en la ruta.
+
+Algunos de los métodos más importantes en el servicio **Router** son:
+
+- **navigate**: navega a una ruta específica.
+- **navigateByUrl**: navega a una ruta específica mediante una URL.
+- **back**: navega hacia atrás en el historial de navegación.
+- **forward**: navega hacia adelante en el historial de navegación.
+
+Algunos de los métodos más importantes en el servicio **ActivatedRoute** on:
+
+- **params**: un observador que emite los parámetros de ruta cada vez que cambian.
+- **data**: un observador que emite los datos asociados a la ruta cada vez que cambian.
+- **queryParams**: un observador que emite los parámetros de consulta en la URL cada vez que cambian.
+- **parent**: una propiedad que proporciona acceso al objeto ActivatedRoute del componente padre.
+- **firstChild**: una propiedad que proporciona acceso al primer objeto ActivatedRoute de los componentes hijos.
+
 
 ### d) ¿Qué son las Route Guards? ¿Cómo se usan las guardas en Angular? Describe todas las guardas que existen en Angular.
+
+Las **Route Guards** son una característica de Angular que permite controlar el acceso a las rutas de una aplicación. Permiten ejecutar lógica específica antes de permitir o denegar el acceso a una ruta. Esto es útil para tareas como la autenticación, la autorización, la validación de datos, entre otras.
+
+Existen varios tipos de guardas:
+
+- **CanActivate**: permite controlar si un usuario puede activar una ruta específica. Se utiliza para controlar el acceso a rutas protegidas.
+- **CanActivateChild**: permite controlar si un usuario puede activar una ruta hija de una ruta específica.
+- **CanDeactivate**: permite controlar si un usuario puede desactivar una ruta específica. Se utiliza para preguntar al usuario si desea abandonar un formulario no guardado, por ejemplo.
+- **CanLoad**: permite controlar si un usuario puede cargar un módulo específico. Se utiliza para controlar el acceso a módulos protegidos.
+
+Para utilizar una guarda, primero se debe crear un servicio que implemente el tipo de guarda deseado. Después, hay que registrar la guarda en el archivo de configuración de rutas de la aplicación, especificando la ruta a proteger y la guarda que se va a utilizar para controlar el acceso a esa ruta.
 
 
 ### e) ¿Qué es la carga Lazy de los módulos de Angular? ¿Cómo se configura en Angular la carga Lazy?
