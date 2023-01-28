@@ -9,6 +9,17 @@ Cuando el usuario navega a la ruta '/contact', el enrutador busca en la configur
 
 ### b) ¿Para qué se utilizan las directivas routerLink y routerLinkActive? ¿Existen más directivas relacionadas con el router?
 
+**routerLink** es una directiva de Angular que se utiliza para crear enlaces de navegación dentro de la aplicación. Se utiliza en conjunto con el enrutador de Angular para navegar a través de diferentes rutas de la aplicación. Es una alternativa al uso de elementos anchor <a> estándar, ya que permite navegar entre rutas de forma programática en lugar de depender de una acción del usuario como hacer clic en un enlace.
+
+Por otro lado **routerLinkActive** es una directiva de Angular que se utiliza para agregar una clase CSS a un elemento cuando la ruta correspondiente está activa. Esto permite crear un estilo visual para indicar la ruta activa en la barra de navegación o menú de la aplicación.
+
+A continuación podemos ver otras directivas relacionadas con el router:
+
+- **routerLinkActiveOptions**: es una directiva que se utiliza para especificar las opciones de la directiva routerLinkActive.
+- **routerOutlet**: es una directiva que se utiliza para indicar donde se renderizará la vista correspondiente a la ruta activa.
+- **routerLinkActive**: es una directiva que se utiliza para agregar una clase CSS a un elemento cuando la ruta correspondiente está activa.
+- **routerLinkActiveOptions**: es una directiva que se utiliza para especificar las opciones de la directiva routerLinkActive.
+
 
 ### c) ¿Qué diferencias hay entre los servicios Router y ActivatedRoute? ¿Qué funcionalidades tiene cada uno de estos servicios? Describe algunos de los métodos más importantes por los que están compuestos.
 
