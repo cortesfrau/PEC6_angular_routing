@@ -78,3 +78,15 @@ const routes: Routes = [
 Los **middlewares** en Node.js son funciones que se ejecutan en un orden específico antes de llegar a un endpoint o ruta en una aplicación. Son útiles para manipular o transformar los datos de la solicitud y respuesta HTTP, realizar tareas de autenticación o autorización, y para componer el comportamiento de la aplicación en múltiples capas.
 
 Por ejemplo, un middleware puede verificar si un usuario ha iniciado sesión antes de permitirle acceder a un endpoint específico, o puede registrar cada solicitud y respuesta para fines de depuración.
+
+A continuación se enumeran algunos de los usos que se le pueden dar a los middlewares en una apliacación:
+
+- Autenticación y autorización
+- Manejo de errores
+- Modificación de solicitudes y respuestas HTTP
+- Caché de solicitudes
+- Protección de rutas
+- Configuración de cabeceras HTTP
+- Procesamiento de token JWT
+- Almacenamiento en el lado del cliente (local storage o session storage)
+- Compresión de datos HTTP.
