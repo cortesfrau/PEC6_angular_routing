@@ -79,7 +79,7 @@ Los **middlewares** en Node.js son funciones que se ejecutan en un orden especí
 
 Por ejemplo, un middleware puede verificar si un usuario ha iniciado sesión antes de permitirle acceder a un endpoint específico, o puede registrar cada solicitud y respuesta para fines de depuración.
 
-A continuación se enumeran algunos de los usos que se le pueden dar a los middlewares en una apliacación:
+A continuación se enumeran algunos de los usos que se le pueden dar a los middlewares en una aplicación:
 
 - Autenticación y autorización
 - Manejo de errores
