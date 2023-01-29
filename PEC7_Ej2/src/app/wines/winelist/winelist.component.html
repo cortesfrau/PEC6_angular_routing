@@ -1,0 +1,14 @@
+<div class="search">
+  <input
+    type="text" 
+    name="searchBox"
+    [(ngModel)]="searchString"
+    placeholder="Buscar vins"
+    (keyup)="search()">
+</div>
+
+<app-wineitem
+  [wine]="wine"
+  (quantityChange)="onQuantityChange($event)"
+  *ngFor="let wine of wines$ | async">
+</app-wineitem>
