@@ -16,7 +16,6 @@ import { UserService } from "./services/user.service";
 import { UserStoreService } from "./services/userstore.service";
 import { WineAppInterceptor } from "./services/wineapp.interceptor";
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +36,7 @@ import { WineAppInterceptor } from "./services/wineapp.interceptor";
   ],
   providers: [
     WineService,
+    UserService,
     UserStoreService,
     {
       provide: HTTP_INTERCEPTORS,
