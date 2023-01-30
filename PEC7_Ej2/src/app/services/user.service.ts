@@ -6,6 +6,7 @@ import { UserStoreService } from "./userstore.service";
 import { map } from "rxjs/operators";
 
 @Injectable()
+
 export class UserService {
   private API_ENDPOINT = "http://localhost:3000/api/user";
   constructor(private http: HttpClient, private userStore: UserStoreService) {}

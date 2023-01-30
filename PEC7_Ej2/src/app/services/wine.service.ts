@@ -1,26 +1,25 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from "rxjs";
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Wine } from "../models/wine";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class WineService {
-  
-  constructor(private http: HttpClient) { }
+  private API_ENDPOINT = "http://localhost:3000/api/wine";
+  constructor(private httpClient: HttpClient) {}
 
-  getWines(query?: string): Observable<Wine[]> {
-    return this.http.get<Wine[]>('http://localhost:3000/api/wine', { params: { q: query! } });
+  getWines(): Observable<Wine[]> {
+    return this.httpClient.get<Wine[]>(this.API_ENDPOINT);
   }
 
-  changeQuantity(wineID: number, changeInQuantity: number): Observable<any> {
-    return this.http.patch('http://localhost:3000/api/wine/' + wineID, {changeInQuantity: changeInQuantity});
+  changeQuantity(wineID: number, changeInQuantity: number): Observable<Wine> {
+    return this.httpClient.patch<Wine>(`${this.API_ENDPOINT}/${wineID}`, {
+      changeInQuantity
+    });
   }
 
-  create(wine: Wine): Observable<Wine> {
-    return this.http.post<Wine>('http://localhost:3000/api/wine', wine);
+  create(wine: Wine): Observable<any> {
+    return this.httpClient.post<Wine>(this.API_ENDPOINT, wine);
   }
-
 }

@@ -1,40 +1,25 @@
 <h3>{{ message }}</h3>
 <div class="form-group">
   <form (ngSubmit)="login()" [formGroup]="loginForm">
+
+    <!-- User name -->
     <div class="user-name">
-      <input
-        type="text"
-        placeholder="Username"
-        required
-        name="username"
-        formControlName="username"
-      />
-      <div
-        *ngIf="
-          (loginForm.get('username').dirty || message) &&
-          loginForm.get('username').invalid
-        "
-      >
-        Username is Mandatory
+      <input type="text" placeholder="Nom d'usuari" name="username" formControlName="username" required>
+      <div *ngIf="(loginForm.controls['username'].dirty || message) && loginForm.controls['username']?.invalid">      
+        El nom d'usuari és obligatori
       </div>
     </div>
+
+    <!-- Password -->
     <div class="password">
-      <input
-        type="password"
-        placeholder="Password"
-        required
-        name="password"
-        formControlName="password"
-      />
-      <div
-        *ngIf="
-          (loginForm.get('password').dirty || message) &&
-          loginForm.get('password').invalid
-        "
-      >
-        Password is Mandatory
+      <input type="password" placeholder="Contrasenya" required name="password" formControlName="password">
+      <div *ngIf="(loginForm.controls['password'].dirty || message) && loginForm.controls['password']?.invalid">      
+        La contrasenya és obligatòria
       </div>
     </div>
-    <button type="submit">Login</button>
+
+    <!-- Submit -->
+    <button type="submit">Accedir</button>
+    
   </form>
 </div>
