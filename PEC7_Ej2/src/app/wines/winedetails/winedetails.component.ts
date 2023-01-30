@@ -4,8 +4,8 @@ import { Wine } from "../../models/wine";
 
 @Component({
   selector: "app-wine-details",
-  templateUrl: "./wine-details.component.html",
-  styleUrls: ["./wine-details.component.css"],
+  templateUrl: "./winedetails.component.html",
+  styleUrls: ["./winedetails.component.css"],
 })
 export class WineDetailsComponent implements OnInit {
   public wine!: Wine;

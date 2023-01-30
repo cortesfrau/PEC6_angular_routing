@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Login } from "../models/login";
 import { Observable } from "rxjs";
-import { UserStoreService } from "./user-store.service";
+import { UserStoreService } from "./userstore.service";
 import { map } from "rxjs/operators";
 
 @Injectable()
