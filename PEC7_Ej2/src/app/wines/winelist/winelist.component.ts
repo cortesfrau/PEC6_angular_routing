@@ -32,7 +32,6 @@ export class WinelistComponent implements OnInit {
   onQuantityChange(change: WineQuantityChange) {
     this.wineService.changeQuantity(change.wine.id, change.changeInQuantity)
       .subscribe((res) => {
-        console.log(res.msg);
         this.reloadWineList.next();
       });
   }
