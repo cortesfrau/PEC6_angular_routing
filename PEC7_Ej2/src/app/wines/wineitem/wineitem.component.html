@@ -1,6 +1,6 @@
 <div class="wineitem" [ngClass]="{'wineitem--is-on-sale': wine.isOnSale}">
   <div class="wineitem-img">
-    <img [src]="wine.imageUrl | imageWine" />
+    <img [src]="wine.imageUrl" routerLink="/wine/{{ wine.id }}" />
   </div>
   <div class="wineitem-content">
     <h2 class="wineitem-title">{{ wine.name }}</h2>
