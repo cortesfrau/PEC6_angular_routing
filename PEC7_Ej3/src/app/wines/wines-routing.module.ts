@@ -9,12 +9,12 @@ import { WineNewComponent } from "./components/winenew/winenew.component";
 
 const routes: Routes = [
   {
-    path: "list",
+    path: "wines/list",
     component: WineListComponent,
     canActivate: [AuthGuardService],
   },
   {
-    path: "create",
+    path: "wines/create",
     component: WineNewComponent,
     canActivate: [AuthGuardService],
     canDeactivate: [WineNewDeactivateGuardService],
