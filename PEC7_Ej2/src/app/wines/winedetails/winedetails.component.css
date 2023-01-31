@@ -9,6 +9,10 @@
 .wine-details-food-title {
   margin-bottom: .5rem;
 }
+.wine-details-food-item {
+  display: block;
+}
 .wine-details-price {
   font-size: 2rem;
+  margin-top: 2rem;
 }
