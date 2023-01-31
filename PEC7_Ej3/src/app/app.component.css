@@ -1,0 +1,16 @@
+h1 {
+  font-size: 2rem;
+  margin: 0 0 3rem;
+}
+
+/* Navigation */
+.nav {
+  padding: .5rem 1rem;
+  background-color: var(--beige);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--dark-beige);
+  padding: .5rem 1rem;
+}

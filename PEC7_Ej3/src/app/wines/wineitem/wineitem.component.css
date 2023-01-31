@@ -1,0 +1,58 @@
+.wineitem {
+  border: 1px solid var(--beige);
+  padding: 3rem;
+  border-radius: .5rem;
+  display: inline-block;
+  margin: .5rem;
+  width: 300px;
+}
+.wineitem.wineitem--is-on-sale {
+  background-color: var(--beige);
+  border-color: var(--beige);
+}
+.wineitem-img {
+  margin-bottom: 2rem;
+}
+.wineitem-img img {
+  max-height: 300px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.wineitem-title {
+  font-size: 1.5rem;
+  margin: 0 0 .5rem 0;
+}
+.wineitem-price {
+  font-size: 1.5rem;
+  margin: 0 0 2rem 0;
+}
+.wineitem-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wineitem-select {
+  margin: 0 .75rem;
+  
+}
+.wineitem-quantity {
+  margin: 0 .75rem;
+  min-width: 12px;
+  text-align: center;
+}
+.wineitem-btn {
+  border: 0;
+  color: var(--white);
+  background-color: var(--dark-beige);
+  font-size: 1.5rem;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  border-radius: .25rem;
+}
+.wineitem-btn:hover {
+  opacity: .7;
+}

@@ -1,0 +1,25 @@
+<h3>{{ message }}</h3>
+<div class="form-group">
+  <form (ngSubmit)="register()" [formGroup]="registerForm">
+
+    <!-- User name -->
+    <div class="user-name">
+      <input type="text" placeholder="Nom d'usuari" name="username" formControlName="username" required>
+      <div *ngIf="(registerForm.controls['username'].dirty || message) && registerForm.controls['username']?.invalid">      
+        El nom d'usuari és obligatori
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="password">
+      <input type="password" placeholder="Contrasenya" name="password" formControlName="password" required>
+      <div *ngIf="(registerForm.controls['password'].dirty || message) && registerForm.controls['password']?.invalid">      
+        La contrasenya és obligatòria
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Registre</button>
+
+  </form>
+</div>

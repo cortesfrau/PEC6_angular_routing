@@ -1,0 +1,18 @@
+.wine-details {
+  padding: 1rem;
+  background-color: var(--beige);
+  margin: 2rem 0;
+}
+.wine-details-name {
+  color: var(--dark-beige)
+}
+.wine-details-food-title {
+  margin-bottom: .5rem;
+}
+.wine-details-food-item {
+  display: block;
+}
+.wine-details-price {
+  font-size: 2rem;
+  margin-top: 2rem;
+}

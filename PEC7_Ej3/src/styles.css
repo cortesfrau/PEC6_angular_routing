@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+:root {
+  --white: #fff;
+  --beige: #f9ecde;
+  --dark-beige: #da954c;
+}
+
+body {
+  text-align: center;
+  margin: 3rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.25rem;
+}

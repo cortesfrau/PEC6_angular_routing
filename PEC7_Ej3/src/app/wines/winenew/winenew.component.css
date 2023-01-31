@@ -1,0 +1,19 @@
+.error {
+  color: red;
+  font-size: .85rem;
+  margin: .25rem 0 .5rem;
+}
+.checkbox {
+  font-size: 1rem;
+}
+button {
+  color: var(--white);
+  background-color: var(--dark-beige);
+  border-radius: .5rem;
+  border: 0;
+  margin: 1rem 0 0 0;
+  padding: .75rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+}

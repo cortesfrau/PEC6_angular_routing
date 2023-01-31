@@ -1,0 +1,36 @@
+<h2>Donar d'alta un nou vi</h2>
+
+<div>
+
+  <form (ngSubmit)="createWine()" [formGroup]="wineForm" #Form="ngForm">
+
+    <!-- Wine name -->
+    <div><input type="text" name="name" placeholder="Nom del vi" formControlName="name" required></div>
+    <div class="error" *ngIf="(wineForm.controls['name']?.dirty || Form.submitted) && wineForm.controls['name']?.errors">      
+      <div *ngIf="wineForm.controls['name'].errors?.['required']">El nom del vi és obligatori.</div>
+      <div *ngIf="wineForm.controls['name'].errors?.['wineNameValid']">El nom del vi no és vàlid</div>
+    </div>
+
+
+    <!-- Wine price -->
+    <div><input type="number" name="price" placeholder="Preu del vi" formControlName="price" required></div>
+    <div class="error" *ngIf="(wineForm.controls['price']?.dirty || Form.submitted) && wineForm.controls['price']?.invalid">
+      <div *ngIf="wineForm.controls['price'].errors?.['required']">El preu del vi és obligatori.</div>
+      <div *ngIf="wineForm.controls['price'].errors?.['min']">El preu del vi ha de ser d'1€ com a mínim.</div>
+    </div>
+
+    <!-- Wine image -->
+    <div><input type="text" name="imageUrl" placeholder="URL de la imatge del vi" formControlName="imageUrl"></div>
+    <div class="error" *ngIf="(wineForm.controls['imageUrl']?.dirty || Form.submitted) && wineForm.controls['imageUrl']?.invalid">
+      <div *ngIf="wineForm.controls['imageUrl'].errors?.['required']">La URL de la imatge del vi és obligatòria.</div>
+      <div *ngIf="wineForm.controls['imageUrl'].errors?.['pattern']">La URL de la imatge del vi no és vàlida.</div>
+    </div>
+
+    <!-- Wine on sale or not -->
+    <div class="checkbox"><input type="checkbox" formControlName="isOnSale" name="isOnSale">En venda</div>
+
+    <!-- Submit button -->
+    <button type="submit">Donar d'alta</button>
+
+  </form>
+</div>
