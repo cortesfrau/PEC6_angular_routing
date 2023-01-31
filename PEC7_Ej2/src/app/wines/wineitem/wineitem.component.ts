@@ -9,7 +9,7 @@ import { WineQuantityChange } from '../../models/wine-quantity-change';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-export class WineitemComponent {
+export class WineItemComponent {
 
   @Input() public wine!: Wine;
   @Output() public quantityChange: EventEmitter<WineQuantityChange> = new EventEmitter();
