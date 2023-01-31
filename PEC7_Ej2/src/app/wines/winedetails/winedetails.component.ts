@@ -13,8 +13,8 @@ export class WineDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.data.subscribe((data: { wine: Wine}) => {
-      this.wine = data.wine;
-    });
+    // this.route.data.subscribe((data: { wine: Wine}) => {
+    //   this.wine = data.wine;
+    // });
   }
 }
