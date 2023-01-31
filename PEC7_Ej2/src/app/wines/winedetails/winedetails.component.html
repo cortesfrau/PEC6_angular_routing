@@ -1,17 +1,13 @@
-<div class="wine-container">
-  <div class="name">{{ wine.name + " (" + wine.id + ")" }}</div>
-  <div class="exchange" *ngFor="let food of wine.foodPairing">
-    name: {{ food.name }} 
-    gluten: {{ food.glutten }}
-    kcal: {{ food.kcal }} 
-    vegan: {{ food.vegan }}
+<div class="wine-details">
+  <h2 class="wine-details-name">{{ wine.name + " (" + wine.id + ")" }}</h2>
+  <h3>Menjars que mariden bé amb el vi</h3>
+  <div class="wine-details-food" *ngFor="let food of wine.foodPairing">
+    <h4 class="wine-details-food-title">{{ food.name }}</h4>
+    <span class="wine-details-foot-item" *ngIf="food.glutten == true">Conté gluten</span>
+    <span class="wine-details-foot-item" *ngIf="food.glutten == false">Sense gluten</span>
+    <span class="wine-details-foot-item" *ngIf="food.vegan == true">És vegà</span>
+    <span class="wine-details-foot-item" *ngIf="food.vegan == false">No és vegà</span>
+    <span class="wine-details-foot-item">Calories: {{ food.kcal }}</span>
   </div>
-
-  <div
-    class="price"
-    [class.positive]="wine.price > 5"
-    [class.negative]="wine.price <= 5"
-  >
-    € {{ wine.price }}
-  </div>
+  <div class="wine-details-price">{{ wine.price }} €</div>
 </div>

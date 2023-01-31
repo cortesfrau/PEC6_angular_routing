@@ -1,14 +1,14 @@
-.wine-container {
-  border: 1px solid black;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 10px;
+.wine-details {
+  padding: 1rem;
+  background-color: var(--beige);
+  margin: 2rem 0;
 }
-
-.positive {
-  color: green;
+.wine-details-name {
+  color: var(--dark-beige)
 }
-
-.negative {
-  color: red;
+.wine-details-food-title {
+  margin-bottom: .5rem;
+}
+.wine-details-price {
+  font-size: 2rem;
 }
