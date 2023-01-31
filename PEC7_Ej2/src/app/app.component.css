@@ -5,15 +5,12 @@ h1 {
 
 /* Navigation */
 .nav {
-  padding: 1rem;
+  padding: .5rem 1rem;
   background-color: var(--beige);
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--dark-beige);
-}
-
-.nav-link.active {
-  
+  padding: .5rem 1rem;
 }
