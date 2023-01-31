@@ -2,3 +2,18 @@ h1 {
   font-size: 2rem;
   margin: 0 0 3rem;
 }
+
+/* Navigation */
+.nav {
+  padding: 1rem;
+  background-color: var(--beige);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--dark-beige);
+}
+
+.nav-link.active {
+  
+}

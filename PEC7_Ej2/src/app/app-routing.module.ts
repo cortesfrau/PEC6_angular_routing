@@ -10,7 +10,7 @@ import { WineNewComponent } from "./wines/winenew/winenew.component";
 import { WineNewDeactivateGuardService } from "./guards/wine-new-deactivate-guard.service";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "user/login", pathMatch: "full" },
+  { path: "", redirectTo: "users/login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   {

@@ -1,18 +1,7 @@
-<h1>Vinoteca</h1>
-<!-- <app-winelist #wineList></app-winelist>
-<app-winenew (wineNew)="wineList.onNew()"></app-winenew> -->
-
-<div class="nav">
-  <span> <a routerLink="/login" routerLinkActive="active"> Login </a> </span>
-  <span>
-    <a routerLink="/register" routerLinkActive="active"> Register </a>
-  </span>
-  <span>
-    <a routerLink="/wines/list" routerLinkActive="active"> Wine List </a>
-  </span>
-  <span>
-    <a routerLink="/wines/create" routerLinkActive="active"> Create Wine </a>
-  </span>
-</div>
-<app-winelist></app-winelist>
-<app-winenew></app-winenew>
+<nav class="nav">
+  <a class="nav-link" routerLink="/login" routerLinkActive="active">Accedir</a>
+  <a class="nav-link" routerLink="/register" routerLinkActive="active">Registre</a>
+  <a class="nav-link" routerLink="/wines/list" routerLinkActive="active">Llista de vins</a>
+  <a class="nav-link" routerLink="/wines/create" routerLinkActive="active">Crear vi</a>
+</nav>
+<router-outlet></router-outlet>
