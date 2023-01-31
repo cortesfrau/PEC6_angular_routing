@@ -1,5 +1,4 @@
 import { Observable, of } from "rxjs";
-
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Wine } from "../models/wine";
@@ -9,13 +8,16 @@ export class WineService {
   private API_ENDPOINT = "http://localhost:3000/api/wine";
   constructor(private httpClient: HttpClient) {}
 
-  getWines(searchString : string): Observable<Wine[]> {
+  getWines(): Observable<Wine[]> {
     return this.httpClient.get<Wine[]>(this.API_ENDPOINT);
+  }
+  getWine(wineID: number): Observable<Wine> {
+    return this.httpClient.get<Wine>(`${this.API_ENDPOINT}/${wineID}`);
   }
 
   changeQuantity(wineID: number, changeInQuantity: number): Observable<Wine> {
     return this.httpClient.patch<Wine>(`${this.API_ENDPOINT}/${wineID}`, {
-      changeInQuantity
+      changeInQuantity,
     });
   }
 

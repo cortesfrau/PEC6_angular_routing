@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 @Injectable()
 
 export class UserStoreService {
-  private _token: string | null;
+  private _token: string = null;
   constructor() {
     this._token = localStorage.getItem("wine-token") || null;
   }
@@ -14,7 +14,7 @@ export class UserStoreService {
   }
 
   get token() {
-    return this._token!;
+    return this._token;
   }
 
   isLoggedIn() {

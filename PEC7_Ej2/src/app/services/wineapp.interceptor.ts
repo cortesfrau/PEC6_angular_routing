@@ -5,12 +5,14 @@ import { Observable } from "rxjs";
 import { UserStoreService } from "./userstore.service";
 
 @Injectable()
+
 export class WineAppInterceptor implements HttpInterceptor {
   constructor(private userStore: UserStoreService) {}
 
   intercept(
     req: HttpRequest<any>,
-    next: HttpHandler): Observable<HttpEvent<any>> {
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     if (this.userStore.token) {
       const authReq = req.clone({
         headers: req.headers.set("X-AUTH-HEADER", this.userStore.token),

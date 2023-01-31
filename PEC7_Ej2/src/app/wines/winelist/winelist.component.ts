@@ -1,46 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { debounceTime, switchMap, distinctUntilChanged, startWith, merge, share } from 'rxjs/operators';
-import { WineService } from 'src/app/services/wine.service';
-import { Wine } from "../../models/wine";
-import { WineQuantityChange } from "../../models/wine-quantity-change";
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { Wine } from "src/app/models/wine";
+import { WineQuantityChange } from "src/app/models/wine-quantity-change";
+import { WineService } from "src/app/services/wine.service";
 
 @Component({
-  selector: 'app-winelist',
-  templateUrl: "winelist.component.html",
-  styles: [],
+  selector: "app-wine-list",
+  template: `
+    <app-wine-item
+      [wine]="wine"
+      (quantityChange)="onQuantityChange($event)"
+      *ngFor="let wine of wines$ | async"
+    ></app-wine-item>
+  `,
+  styles: []
 })
 
-export class WinelistComponent implements OnInit {
-
+export class WineListComponent implements OnInit {
   public wines$!: Observable<Wine[]>;
-  public searchString: string = '';
-  private searchTerms: Subject<string> = new Subject();
-  private reloadWineList : Subject <void> = new Subject();
-
   constructor(private wineService: WineService) {}
 
-  ngOnInit(): void {
-    this.wines$ = this.searchTerms.pipe(
-      startWith(this.searchString),
-      debounceTime(500),
-      distinctUntilChanged(),
-      merge(this.reloadWineList),
-      switchMap((q) => this.wineService.getWines(this.searchString)));
+  ngOnInit() {
+    this.wines$ = this.wineService.getWines();
   }
-
   onQuantityChange(change: WineQuantityChange) {
-    this.wineService.changeQuantity(change.wine.id, change.changeInQuantity)
-      .subscribe((res) => {
-        this.reloadWineList.next();
-      });
-  }
-
-  search() {
-    this.searchTerms.next(this.searchString);
-  }
-
-  onNew() {
-    this.reloadWineList.next();
+    this.wineService.changeQuantity(change.wine.id, change.changeInQuantity);
   }
 }

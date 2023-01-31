@@ -6,11 +6,12 @@ import {
 
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { WineNewComponent } from "../wines/wine-new/wine-new.component";
+import { WineNewComponent } from "../wines/winenew/winenew.component";
 
 @Injectable({
   providedIn: "root",
 })
+
 export class WineNewDeactivateGuardService
   implements CanDeactivate<WineNewComponent> {
   constructor() {}
@@ -21,6 +22,6 @@ export class WineNewDeactivateGuardService
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot
   ): boolean | Observable<boolean> | Promise<boolean> {
-    return window.confirm("Do you want to navigate away from this page?");
+    return window.confirm("Vols sortir d'aquesta pàgina");
   }
 }
