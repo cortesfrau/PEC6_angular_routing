@@ -7,7 +7,6 @@ import { Wine } from "../../models/wine";
   templateUrl: "./winedetails.component.html",
   styleUrls: ["./winedetails.component.css"],
 })
-
 export class WineDetailsComponent implements OnInit {
   public wine!: Wine;
   constructor(private route: ActivatedRoute) {}

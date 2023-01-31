@@ -5,6 +5,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { WineAppInterceptor } from "./shared/services/wineapp.interceptor";
+import { UserService } from "./user/services/user.service";
+import { UserStoreService } from "./shared/services/userstore.service";
+import { WineService } from "./wines/services/wine.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +18,9 @@ import { WineAppInterceptor } from "./shared/services/wineapp.interceptor";
     AppRoutesModule,
   ],
   providers: [
+    UserService,
+    UserStoreService,
+    WineService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: WineAppInterceptor,
