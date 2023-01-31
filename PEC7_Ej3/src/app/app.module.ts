@@ -1,6 +1,6 @@
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
-import { AppRoutesModule } from "./app-routing.module";
+import { AppRoutesModule } from "./app-routes.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
