@@ -10,7 +10,7 @@ import { WineNewComponent } from "./wines/winenew/winenew.component";
 import { WineNewDeactivateGuardService } from "./guards/wine-new-deactivate-guard.service";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "users/login", pathMatch: "full" },
+  { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   {
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     resolve: { wine: WineLoadResolverService },
   },
 
-  { path: "**", redirectTo: "users/register" },
+  { path: "**", redirectTo: "register" },
 ];
 
 @NgModule({
