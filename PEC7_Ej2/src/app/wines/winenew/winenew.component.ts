@@ -5,10 +5,11 @@ import { WineService } from "src/app/services/wine.service";
 import { wineNameValidator } from "src/app/validators/winename-validator";
 
 @Component({
-  selector: "app-wine-new",
+  selector: "app-winenew",
   templateUrl: "./winenew.component.html",
   styleUrls: ["./winenew.component.css"]
 })
+
 export class WineNewComponent {
   public message = "";
 

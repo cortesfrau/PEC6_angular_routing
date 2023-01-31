@@ -4,8 +4,8 @@ import { Wine } from "../../models/wine";
 
 @Component({
   selector: "app-wine-details",
-  templateUrl: "./wine-details.component.html",
-  styleUrls: ["./wine-details.component.css"],
+  templateUrl: "./winedetails.component.html",
+  styleUrls: ["./winedetails.component.css"],
 })
 
 export class WineDetailsComponent implements OnInit {
@@ -13,7 +13,7 @@ export class WineDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.data.subscribe((data: { wine: Wine }) => {
+    this.route.data.subscribe((data: { wine: Wine}) => {
       this.wine = data.wine;
     });
   }

@@ -5,13 +5,13 @@ import { WineQuantityChange } from "src/app/models/wine-quantity-change";
 import { WineService } from "src/app/services/wine.service";
 
 @Component({
-  selector: "app-wine-list",
+  selector: "app-winelist",
   template: `
-    <app-wine-item
+    <app-wineitem
       [wine]="wine"
       (quantityChange)="onQuantityChange($event)"
       *ngFor="let wine of wines$ | async"
-    ></app-wine-item>
+    ></app-wineitem>
   `,
   styles: []
 })
