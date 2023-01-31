@@ -11,6 +11,7 @@ export class WineService {
   getWines(): Observable<Wine[]> {
     return this.httpClient.get<Wine[]>(this.API_ENDPOINT);
   }
+  
   getWine(wineID: number): Observable<Wine> {
     return this.httpClient.get<Wine>(`${this.API_ENDPOINT}/${wineID}`);
   }

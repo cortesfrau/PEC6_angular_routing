@@ -9,8 +9,7 @@ const appRoutes: Routes = [
   },
   {
     path: "wines",
-    loadChildren: () =>
-      import("./wines/wines.module").then((m) => m.WinesModule),
+    loadChildren: () => import("./wines/wines.module").then((m) => m.WinesModule),
   },
   { path: "**", redirectTo: "register" },
 ];
