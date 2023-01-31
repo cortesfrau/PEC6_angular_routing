@@ -31,11 +31,12 @@ const appRoutes: Routes = [
     resolve: { wine: WineLoadResolverService },
   },
 
-  { path: "**", redirectTo: "user/register" },
+  { path: "**", redirectTo: "users/register" },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
 })
+
 export class AppRoutesModule {}
