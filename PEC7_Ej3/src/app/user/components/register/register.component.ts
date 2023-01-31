@@ -1,6 +1,6 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
-import { Login } from 'src/app/models/login';
+import { Login } from 'src/app/user/models/login';
 import { UserService } from '../../services/user.service';
 
 @Component({

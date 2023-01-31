@@ -14,7 +14,7 @@ export class WineLoadResolverService implements Resolve<Wine> {
   resolve(
     route: ActivatedRouteSnapshot
   ): Wine | Observable<Wine> | Promise<Wine> {
-    const wineID = +route.paramMap.get("id")!;
+    const wineID = +route.paramMap.get("id");
     return this.wineService.getWine(wineID);
   }
 }

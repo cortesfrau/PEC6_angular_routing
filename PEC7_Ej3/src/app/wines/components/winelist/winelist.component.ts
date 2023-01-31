@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { Wine } from "src/app/models/wine";
 import { WineQuantityChange } from "src/app/models/wine-quantity-change";
-import { WineService } from "src/app/services/wine.service";
+import { WineService } from "src/app/wines/services/wine.service";
 
 @Component({
   selector: "app-winelist",
