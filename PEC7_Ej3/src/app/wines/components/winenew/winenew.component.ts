@@ -1,6 +1,6 @@
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Component } from "@angular/core";
-import { Wine } from "src/app/models/wine";
+import { Wine } from "../../models/wine";
 import { WineService } from "src/app/wines/services/wine.service";
 import { wineNameValidator } from "src/app/wines/validators/winename-validator";
 

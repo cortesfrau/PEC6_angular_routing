@@ -6,7 +6,7 @@ import {
 
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { WineNewComponent } from "../wines/winenew/winenew.component";
+import { WineNewComponent } from "../../wines/components/winenew/winenew.component";
 
 @Injectable({
   providedIn: "root",
